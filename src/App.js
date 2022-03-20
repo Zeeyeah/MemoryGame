@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
+import './app.css';
+import Card from './Card.js';
+import React from 'react';
 function App() {
+
+
+const cardsArray = ["","","","","","","","","","","",
+                       "","","","","","","","",""]
+
+const [cards, setCards] = React.useState(cardsArray)
+
+const cardElement = cards.map(card=>{
+       return(
+         <Card />
+       )
+})
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='card-wrapper'>
+         {cardElement}
+    </div>
     </div>
   );
 }
