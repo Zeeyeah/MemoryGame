@@ -1,67 +1,183 @@
 #root {
     --primary-color: #d1bd8f;
     --secondary-color: #1d1c22;
-  }
-  @font-face {
-      font-family: 'GenshinImpact';
-      src: url(../Genshin/Genshin.pak);
-  }
-  body{
-      overflow-x: hidden;
+}
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes changer {
+    to{
+        
     }
-    
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    @media only screen and (max-width: 600px){
-    .App{
-    background-color: var(--secondary-color);
-    height: 100vh;
+}
+html body {
+    background-color: #485461;
+    transition: all 0.5s;
+background-image: linear-gradient(90deg,#1d1c22 50%, #d1bd8f 0%);
+    animation: changer 0.5s ease-in-out infinite;
+  }
+ .App{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-direction: column;
+      height: 100vh;
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    font-family: 'GenshinImact';
+    overflow: hidden;
+    font-family: 'Barlow', sans-serif;
   }
+  .card-wrapper{
+      display: grid;
+      grid-template-columns: 80px 80px 80px 80px;
+      grid-template-rows: 80px 80px 80px 80px 80px;
+      grid-gap: 5px;
+      color: white;
+  }
+
   .card-front, .card-back{
+    height: 80px;
+    width: 80px;
+    background-color: #2d2c33;
+    border-radius: 5px;
+    border: 1px var(--primary-color) solid;
+    color: antiquewhite;
+    position: absolute;
+    font-size: 2rem;
+    transition: all 0.4s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.card-back{
+    transform: perspective(600px) rotateY(180deg);
+    
+}
+.card-front{
+    transform: perspective(600px) rotateY(0deg);
+}
+.card-front-on{
+    height: 80px;
+    width: 80px;
+    background-color: #2d2c33;
+    border-radius: 5px;
+    border: 1px var(--primary-color) solid;
+    color: antiquewhite;
+    position: absolute;
+    font-size: 2rem;
+    transition: all 0.4s ease-in-out;
+    backface-visibility: hidden;
+    transform: perspective(600px) rotateY(-180deg);
+    
+}
+.card-back-on{
       height: 80px;
       width: 80px;
       background-color: #2d2c33;
       border-radius: 5px;
       border: 1px var(--primary-color) solid;
-      margin: 0;
       color: antiquewhite;
-      font-size: 2rem;
       position: absolute;
+      font-size: 2rem;
       transition: all 0.4s ease-in-out;
       backface-visibility: hidden;
-    }
-    .card-back{
-        transform: perspective(600px) rotateY(180deg);
-        background-color: red;
-        transform-origin: right;
-        
-    }
-    .card-front{
-        transform-origin: left;
-        transform: perspective(600px) rotateY(0deg);
-    }
-    .card-wrapper{
-        display: grid;
-        grid-template-columns: 80px 80px 80px 80px;
-        grid-template-rows: 80px 80px 80px 80px;
-        grid-gap: 10px;
-        margin-top: 20%;
-    }
-    .card-main:active .card-front{
-        transform: perspective(600px) rotateY(-180deg);
-        
-  }
-    .card-main:active .card-back{
-        transform: perspective(600px) rotateY(0deg);
-        
-  }
+      transform: perspective(600px) rotateY(-180deg);
+      transform: perspective(600px) rotateY(0deg);
+      
+}
 
+
+.png{
+    height: 75px;
+    width: 75px;
+}
+.won{
+    height: 400px;
+    width: 330px;
+    background-color: #2d2c33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px var(--primary-color) solid;
+    color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+.won-background{
+    position: absolute;
+    right: -50%;
+    opacity: 50%;
+}
+.won > h2{
+    position: absolute;
+    top: 10%;
+}
+
+.card-clicks{
+    font-size: 6rem;
+    position: relative;
+    margin: 10px 10px;
+    border: .5px #d1bd8f solid;
+    padding: 20px 20px;
+    border-radius: 10px;
+    background-color: #2d2c33;
+    opacity: 90%;
+}
+.card-clicks::before{
+    content: 'You Completed in';
+    font-size: 12px;
+    position: absolute;
+    top: -5%;
+    left: 12%;
+    background-color: #2d2c33;
+
+}
+.card-clicks::after{
+    content: 'Flips';
+    font-size: 12px;
+    position: absolute;
+    bottom: -5%;
+    left: 40%;
+    background-color: #2d2c33;
+
+}
+.won > button{
+    position: absolute;
+    bottom: 15%;
+    background-color: #d1bd8f;
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.nav-bar{
+    height: 6%;
+    width: 80%;
+    position: absolute;
+    background-color: var(--primary-color);
+    background-image: linear-gradient(90deg, #d1bd8f 50%, #1d1c22 50%);
+
+    top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--secondary-color);
+    border-radius: 20px;
+}
+
+.nav-bar > h2{
+    margin-left: 10px;
+}
+.nav-bar > button{
+    background-color: var(--primary-color);
+    padding: 2.5px 7.5px;
+    border-radius: 30px;
+    font-family: 'Barlow';
+    margin-right: 10px;
+    color: var(--secondary-color)
 }
