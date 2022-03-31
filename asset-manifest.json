@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/MemoryGame/static/css/main.fd256075.css",
+    "main.js": "/MemoryGame/static/js/main.888b1981.js",
+    "static/media/Element_Cryo.png": "/MemoryGame/static/media/Element_Cryo.1905e2706df1f7fc2f0a.png",
+    "static/media/Element_Anemo.png": "/MemoryGame/static/media/Element_Anemo.7bcc299d19ef4fe7783c.png",
+    "static/media/Element_Geo.png": "/MemoryGame/static/media/Element_Geo.f2bfceba67deb3ca28cc.png",
+    "static/media/Element_Dendro.png": "/MemoryGame/static/media/Element_Dendro.5d63a0adb26e329995e9.png",
+    "static/media/Element_Pyro.png": "/MemoryGame/static/media/Element_Pyro.388caca5db62b5246bc6.png",
+    "static/media/background.jpg": "/MemoryGame/static/media/background.15d0c8b923787bfd843a.jpg",
+    "static/media/Element_Hydro.png": "/MemoryGame/static/media/Element_Hydro.6a218aedffab7eb10966.png",
+    "static/media/Emblem_Mondstadt.png": "/MemoryGame/static/media/Emblem_Mondstadt.6502c0ee1f3b514d2f49.png",
+    "static/media/Element_Electro.png": "/MemoryGame/static/media/Element_Electro.7c136a1d39049ec520f0.png",
+    "static/media/Emblem_Inazuma.png": "/MemoryGame/static/media/Emblem_Inazuma.e73f525cfa2d0595db14.png",
+    "static/media/Emblem_Liyue.png": "/MemoryGame/static/media/Emblem_Liyue.43bf2067924485bada3b.png",
+    "index.html": "/MemoryGame/index.html",
+    "main.fd256075.css.map": "/MemoryGame/static/css/main.fd256075.css.map",
+    "main.888b1981.js.map": "/MemoryGame/static/js/main.888b1981.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd256075.css",
+    "static/js/main.888b1981.js"
+  ]
+}
